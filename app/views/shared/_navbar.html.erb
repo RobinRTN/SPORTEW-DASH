@@ -1,36 +1,46 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+  <% if user_signed_in? %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="navbar_signed_in ">
+      <div class="container d-flex flex-column justify-content-between">
+        <div class="logo">
+          <%= link_to "", root_path, class: "" do %>
+            <%= image_tag "SPORTEWS.png" %>
+          <% end %>
+        </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
-      </ul>
+        <div class="bouttons-nav-loggin d-flex justify-content-center align-items-center">
+          <div class="">
+            <%= link_to "Se connecter", new_user_session_path, class: "btn-primary" %>
+          </div>
+          <div class="">
+            <%= link_to "S'inscrire", new_user_registration_path, class: "btn-primary" %>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-  </div>
-</div>
+
+    <% else %>
+
+    <div class="navbar_signed_out">
+      <div class="container d-flex justify-content-between">
+        <div class="logo">
+          <%= link_to "", class: "" do %>
+            <%= image_tag "SPORTEWS.png" %>
+          <% end %>
+        </div>
+
+        <div class="bouttons-nav-loggout d-flex align-items-center justify-content-center">
+          <div class="me-1">
+            <%=link_to "Se connecter", new_user_session_path, class: "btn-connecter" %>
+          </div>
+          <div class="ms-1">
+            <%=link_to "S'inscrire", new_user_registration_path, class: "btn-inscrire" %>
+          </div>
+        </div>
+
+      <% end %>
+      </div>
+
+    </div>

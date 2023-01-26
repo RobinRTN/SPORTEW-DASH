@@ -1,3 +1,7 @@
-fieldset > legend {
-  display: none;
+.sign-up-block {
+  background-color: $ll-blue-sp;
+  border-radius: 8px;
+  margin-top: 3em;
+  padding: 2em;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }

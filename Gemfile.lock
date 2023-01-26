@@ -104,6 +104,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.10.2)
+      devise (>= 4.8.0)
+    devise-i18n-views (0.3.7)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -256,6 +259,8 @@ DEPENDENCIES
   capybara
   debug
   devise
+  devise-i18n
+  devise-i18n-views
   dotenv-rails
   font-awesome-sass (~> 6.1)
   jbuilder

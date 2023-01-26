@@ -2,9 +2,13 @@ require_relative "boot"
 
 require "rails/all"
 
+
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+
 
 module SPORTEWDash
   class Application < Rails::Application
@@ -15,6 +19,11 @@ module SPORTEWDash
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.i18n.available_locales = :fr
+    config.i18n.default_locale = :fr
+    config.i18n.locale = :fr
+    config.i18n.fallbacks = true
+
 
     # Configuration for the application, engines, and railties goes here.
     #

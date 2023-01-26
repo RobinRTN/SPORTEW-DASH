@@ -1,0 +1,24 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "L'adresse e-mail ne peut pas être vide"
+              invalid: "L'adresse e-mail est invalide"
+              taken: "L'adresse e-mail est déjà utilisée"
+            password:
+              blank: "Le mot de passe ne peut pas être vide"
+              too_short: "Le mot de passe doit contenir au moins %{count} caractères"
+              confirmation: "La confirmation du mot de passe ne correspond pas"
+            first_name:
+              blank: "Le prénom ne peut pas être vide"
+            last_name:
+              blank: "Le nom ne peut pas être vide"
+            billing_address:
+              blank: "L'adresse postale ne peut pas être vide"
+            billing_city:
+              blank: "La ville ne peut pas être vide"
+            sport_ids:
+              blank: "Vous devez sélectionner au moins un sport"

@@ -1,18 +1,5 @@
 # frozen_string_literal: true
-
 class Users::RegistrationsController < Devise::RegistrationsController
-
-  def new
-    @sports = Sport.all
-    super
-  end
-
-  private
-
-
-  def sign_up_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :billing_address, :billing_city, :billing_country, sport_ids: [])
-  end
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 

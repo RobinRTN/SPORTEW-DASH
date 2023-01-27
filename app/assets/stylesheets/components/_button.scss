@@ -1,15 +1,15 @@
-.btn-connecter {
+.btn-mini {
   color: $blue-sp;
   font-weight: 400;
   transition-duration: 0.4s;
   text-decoration: none;
 }
 
-.btn-connecter:hover {
+.btn-mini:hover {
   color: $yellow-sp;
 }
 
-.btn-inscrire {
+.btn-basic-bleu {
   text-decoration: none;
   padding: 0.5em 0.8em;
   border-radius: 0.4em;
@@ -21,7 +21,7 @@
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
-.btn-inscrire:hover {
+.btn-basic-bleu:hover {
   background: $d-blue-sp;
   color: $ll-blue-sp;
 }

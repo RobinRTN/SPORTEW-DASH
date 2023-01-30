@@ -13,7 +13,7 @@
         <a href="#"><i class="fa-solid fa-receipt"></i></a>
         <a href="#"><i class="fa-solid fa-user"></i></a>
         <div class="logo">
-          <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
+          <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, onclick: "return confirm('Êtes vous sûr de vouloir vous déconnecter ?');" do %>
             <%= image_tag "SPORTEWS.png" %>
           <% end %>
         </div>

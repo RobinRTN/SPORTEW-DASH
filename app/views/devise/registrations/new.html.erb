@@ -62,32 +62,6 @@
                       required: true,
                       input_html: { autocomplete: "new-password", placeholder: "confirmer mot de passe" },
                       error: t('activerecord.errors.models.user.attributes.password.confirmation') %>
-          <div class="d-flex justify-content-between">
-            <div class="flex-grow-1 me-1">
-              <%= f.input :first_name,
-                          label: false,
-                          required: true,
-                          input_html: { placeholder: "prénom" },
-                          error: t('activerecord.errors.models.user.attributes.first_name.blank') %>
-            </div>
-            <div class="flex-grow-1 ms-1">
-              <%= f.input :last_name,
-                          label: false,
-                          required: true,
-                          input_html: { placeholder: "nom" },
-                          error: t('activerecord.errors.models.user.attributes.last_name.blank') %>
-            </div>
-          </div>
-          <%= f.input :billing_address,
-                      label: false,
-                      required: true,
-                      input_html: { placeholder: "adresse (numéro et rue)" },
-                      error: t('activerecord.errors.models.user.attributes.billing_address.blank') %>
-          <%= f.input :billing_city,
-                      label: false,
-                      required: true,
-                      input_html: { placeholder: "ville" },
-                      error: t('activerecord.errors.models.user.attributes.billing_city.blank') %>
 
         <div class="form-actions">
           <%= f.button :submit, "S'inscrire", class: "btn-basic-bleu", value: "S'inscrire" %>

@@ -1,6 +1,6 @@
-class CreateUserSports < ActiveRecord::Migration[7.0]
+class CreateUsersSports < ActiveRecord::Migration[7.0]
   def change
-    create_table :user_sports do |t|
+    create_table :users_sports do |t|
       t.references :user, null: false, foreign_key: true
       t.references :sport, null: false, foreign_key: true
 
